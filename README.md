@@ -1,64 +1,57 @@
 🚀 Agentic OS Scheduler
-Dynamic Weight Adaptation for Smart CPU Scheduling
+Dynamic Weight Adaptation for Intelligent CPU Scheduling
 
-⚡ An adaptive CPU scheduler that uses ML + Reinforcement Learning to optimize latency, fairness, and throughput in real time.
+⚡ A next-generation CPU scheduler using Machine Learning + Reinforcement Learning to dynamically optimize system performance in real time.
 
-✨ Highlights
+✨ Overview
+
+Traditional schedulers rely on fixed priorities, which fail under changing workloads.
+This project introduces an adaptive, learning-based scheduler that continuously improves:
+
+⚡ Latency
+
+⚖️ Fairness
+
+🚀 Throughput
+
+🧠 Core Approach
+Component	Role
+📊 Gaussian Naïve Bayes	Detects workload (Interactive / Batch / Mixed)
+🎯 UCB Bandit	Selects optimal scheduling weights
+🔁 Feedback Loop	Learns from system performance
+🏗️ System Architecture
+Telemetry → Classification → Decision → Weight Update → Scheduling → Feedback
+
+Kernel (Data Plane): Fast scheduling using sched_ext
+
+User Space (Control Plane): Learning and optimization
+
+⚙️ Scheduling Model
+score(p) = Σ wi · fi(p)
+
+wi → Adaptive weights
+
+fi(p) → Task features
+
+✔ Weights are updated dynamically based on workload behavior
+
+📈 Performance
 
 ⚡ Up to 8.7% lower P99 latency
 
-🎯 Better interactive responsiveness
+🎮 Improved interactive responsiveness
 
-⚖️ Improved fairness (Jain’s Index)
+⚖️ Higher fairness index
 
-🔁 Adapts in ~200 ms to workload changes
+🔁 ~200 ms adaptation speed
 
-🧠 How It Works
-
-📊 Gaussian Naïve Bayes → Detects workload type
-
-🎯 UCB Bandit → Tunes scheduler weights
-
-🔁 Closed-loop system → Continuously learns
-
-🏗️ Architecture
-
-Kernel (Data Plane) → Fast scheduling via sched_ext
-
-User Space (Control Plane) → ML + decision making
-
-📌 Uses telemetry → classify → optimize → update → repeat
-
-⚙️ Core Idea
-𝑠
-𝑐
-𝑜
-𝑟
-𝑒
-(
-𝑝
-)
-=
-Σ
-𝑤
-𝑖
-⋅
-𝑓
-𝑖
-(
-𝑝
-)
-score(p)=Σwi⋅fi(p)
-
-Dynamic weights adapt based on system behavior in real time.
-
-🆚 Why Not Traditional Schedulers?
-Scheduler	Problem
+🆚 Comparison
+Scheduler	Limitation
 FCFS	High latency
-SJF	Unfair
-RR	Inefficient
+SJF	Starvation
+Round Robin	Inefficient
 Priority	Static
-✅ Agentic	Adaptive & intelligent
+Agentic Scheduler	✅ Adaptive & intelligent
 🔋 Efficiency
 
 🔻 ~9.9% power reduction
@@ -67,11 +60,11 @@ Priority	Static
 
 🛠️ Tech Stack
 
-Linux sched_ext (eBPF)
+🐧 Linux sched_ext (eBPF)
 
-Machine Learning (GNB)
+🧠 Machine Learning (GNB)
 
-Reinforcement Learning (UCB)
+🎯 Reinforcement Learning (UCB)
 
 👨‍💻 Authors
 
@@ -79,6 +72,6 @@ Mayank Patel
 
 Rutvik Tayde
 
-⭐ Final Note
+⭐ Conclusion
 
-A step toward intelligent, self-optimizing operating systems.
+Moving towards self-optimizing operating systems 🚀
