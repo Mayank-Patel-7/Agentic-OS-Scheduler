@@ -1,77 +1,160 @@
-🚀 Agentic OS Scheduler
-Dynamic Weight Adaptation for Intelligent CPU Scheduling
+<h1 align="center">🚀 Agentic OS Scheduler</h1>
+<h3 align="center">Dynamic Weight Adaptation for Intelligent CPU Scheduling</h3>
 
-⚡ A next-generation CPU scheduler using Machine Learning + Reinforcement Learning to dynamically optimize system performance in real time.
+<p align="center">
+⚡ A next-generation CPU scheduler using <b>Machine Learning + Reinforcement Learning</b> 
+to dynamically optimize system performance in real time.
+</p>
 
-✨ Overview
+<hr>
 
-Traditional schedulers rely on fixed priorities, which fail under changing workloads.
-This project introduces an adaptive, learning-based scheduler that continuously improves:
+<h2>✨ Overview</h2>
+<p>
+Traditional schedulers rely on <b>fixed priorities</b>, which fail under changing workloads.
+This project introduces an <b>adaptive, learning-based scheduler</b> that continuously improves:
+</p>
 
-⚡ Latency
+<ul>
+  <li>⚡ Latency</li>
+  <li>⚖️ Fairness</li>
+  <li>🚀 Throughput</li>
+</ul>
 
-⚖️ Fairness
+<hr>
 
-🚀 Throughput
+<h2>🧠 Core Approach</h2>
 
-🧠 Core Approach
-Component	Role
-📊 Gaussian Naïve Bayes	Detects workload (Interactive / Batch / Mixed)
-🎯 UCB Bandit	Selects optimal scheduling weights
-🔁 Feedback Loop	Learns from system performance
-🏗️ System Architecture
+<table>
+<tr>
+<th>Component</th>
+<th>Role</th>
+</tr>
+
+<tr>
+<td>📊 Gaussian Naïve Bayes</td>
+<td>Detects workload (Interactive / Batch / Mixed)</td>
+</tr>
+
+<tr>
+<td>🎯 UCB Bandit</td>
+<td>Selects optimal scheduling weights</td>
+</tr>
+
+<tr>
+<td>🔁 Feedback Loop</td>
+<td>Learns from system performance</td>
+</tr>
+</table>
+
+<hr>
+
+<h2>🏗️ System Architecture</h2>
+
+<pre>
 Telemetry → Classification → Decision → Weight Update → Scheduling → Feedback
+</pre>
 
-Kernel (Data Plane): Fast scheduling using sched_ext
+<p>
+<b>Kernel (Data Plane):</b> Fast scheduling using <code>sched_ext</code><br>
+<b>User Space (Control Plane):</b> Learning and optimization
+</p>
 
-User Space (Control Plane): Learning and optimization
+<hr>
 
-⚙️ Scheduling Model
+<h2>⚙️ Scheduling Model</h2>
+
+<pre>
 score(p) = Σ wi · fi(p)
+</pre>
 
-wi → Adaptive weights
+<ul>
+  <li><b>wi</b> → Adaptive weights</li>
+  <li><b>fi(p)</b> → Task features</li>
+</ul>
 
-fi(p) → Task features
+<p>✔ Weights update dynamically based on workload behavior</p>
 
-✔ Weights are updated dynamically based on workload behavior
+<hr>
 
-📈 Performance
+<h2>📈 Performance</h2>
 
-⚡ Up to 8.7% lower P99 latency
+<ul>
+  <li>⚡ Up to <b>8.7% lower P99 latency</b></li>
+  <li>🎮 Improved interactive responsiveness</li>
+  <li>⚖️ Higher fairness index</li>
+  <li>🔁 ~200 ms adaptation speed</li>
+</ul>
 
-🎮 Improved interactive responsiveness
+<hr>
 
-⚖️ Higher fairness index
+<h2>🆚 Comparison</h2>
 
-🔁 ~200 ms adaptation speed
+<table>
+<tr>
+<th>Scheduler</th>
+<th>Limitation</th>
+</tr>
 
-🆚 Comparison
-Scheduler	Limitation
-FCFS	High latency
-SJF	Starvation
-Round Robin	Inefficient
-Priority	Static
-Agentic Scheduler	✅ Adaptive & intelligent
-🔋 Efficiency
+<tr>
+<td>FCFS</td>
+<td>High latency</td>
+</tr>
 
-🔻 ~9.9% power reduction
+<tr>
+<td>SJF</td>
+<td>Starvation</td>
+</tr>
 
-⚡ Smart P-core / E-core utilization
+<tr>
+<td>Round Robin</td>
+<td>Inefficient</td>
+</tr>
 
-🛠️ Tech Stack
+<tr>
+<td>Priority</td>
+<td>Static</td>
+</tr>
 
-🐧 Linux sched_ext (eBPF)
+<tr>
+<td><b>Agentic Scheduler</b></td>
+<td>✅ Adaptive & intelligent</td>
+</tr>
+</table>
 
-🧠 Machine Learning (GNB)
+<hr>
 
-🎯 Reinforcement Learning (UCB)
+<h2>🔋 Efficiency</h2>
 
-👨‍💻 Authors
+<ul>
+  <li>🔻 ~9.9% power reduction</li>
+  <li>⚡ Smart P-core / E-core utilization</li>
+</ul>
 
-Mayank Patel
+<hr>
 
-Rutvik Tayde
+<h2>🛠️ Tech Stack</h2>
 
-⭐ Conclusion
+<ul>
+  <li>🐧 Linux <code>sched_ext</code> (eBPF)</li>
+  <li>🧠 Machine Learning (GNB)</li>
+  <li>🎯 Reinforcement Learning (UCB)</li>
+  <li>🐍 Currentlly Simulation by Python</li>
+</ul>
 
-Moving towards self-optimizing operating systems 🚀
+<hr>
+
+<h2>👨‍💻 Authors</h2>
+
+<ul>
+  <li><b>Mayank Patel</b></li>
+  <li><b>Rutvik Tayde</b></li>
+  <li><b>Kushal Jain</b></li>
+</ul>
+
+<hr>
+
+<h2>⭐ Conclusion</h2>
+
+<p align="center">
+<b>Moving towards self-optimizing operating systems 🚀</b>
+</p>
