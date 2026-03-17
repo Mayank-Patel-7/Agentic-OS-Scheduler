@@ -132,6 +132,30 @@ score(p) = Σ wi · fi(p)
 
 <hr>
 
+<h2>📊 Results & Visualizations</h2>
+
+<h3 align="center">🏗️ System Architecture</h3>
+
+<p align="center">
+  <img src="fig1_architecture.png" width="800">
+</p>
+
+<p align="center">
+  <i>Figure 1: Agentic OS Scheduler architecture showing control plane and data plane interaction</i>
+</p>
+
+<br>
+
+<h3 align="center">⚡ Core Assignment Efficiency</h3>
+
+<p align="center">
+  <img src="fig5_core_assignment.png" width="800">
+</p>
+
+<p align="center">
+  <i>Figure 2: Intelligent P-core / E-core assignment improves performance and efficiency</i>
+</p>
+
 <h2>🛠️ Tech Stack</h2>
 
 <ul>
